@@ -7,3 +7,8 @@ html,
 body {
     height: 100%;
 }
+
+:root {
+    --main-background: #1B4B5A;
+    --accent-background: #f55449;
+}
