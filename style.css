@@ -46,7 +46,8 @@ body,
 }
 .menuContainer li {
     display: grid;
-    grid-template: 1fr / min-content 1fr
+    grid-template: 1fr / min-content 1fr;
+    align-items: center
 }
 .menuContainer img {
     width: 1.7rem;
