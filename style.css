@@ -15,16 +15,66 @@ body,
     --grey: #e5ecf6;
 }
 
-.container{
+.container {
     display: grid;
-    grid-template: 11rem 1fr / 20rem 1fr;
+    grid-template: 11rem 1fr / 19rem 1fr;
 }
-.sidebar{
+.sidebar {
     background-color: var(--main-background);
     grid-area: 1/1 / 3/2;
+    display: grid;
+    grid-template: 6rem 1fr / 1fr;
 }
-.hero{}
+/* .hero {} */
    
-.main{
+.main {
     background-color: var(--grey);
+} 
+.logoContainer {
+    margin-left: 1.15rem;
+    display: grid;
+    grid-template: 1fr / 1fr 4fr;
+    margin-top: 1.15rem;
+}
+
+.menuContainer {
+    display: grid;
+    grid-template: repeat(9, min-content) / 1fr;
+    gap: 1.6rem;
+    margin-left: 1.5rem;
+   list-style-type: none;
+}
+.menuContainer li {
+    display: grid;
+    grid-template: 1fr / min-content 1fr
+}
+.menuContainer img {
+    width: 1.7rem;
+}
+.menuContainer a {
+    color: white;
+    font-size: 1.4rem;
+    font-family: 'ubuntu', sans-serif;
+    font-weight: 500;
+    padding-left: 1.4rem;
+}
+
+ul li:nth-child(6) {
+    margin-bottom: 4rem !important;
+}
+ul li:nth-child(1) {
+    margin-top: 2rem;
+}
+
+.title {
+    color: white;
+    font-size: 2rem;
+    font-family: 'ubuntu', sans-serif;
+    font-weight: 500;
+    position: relative;
+    top: 9px;
+    left: 15px;
+}
+.logo {
+    width: 3.5rem;
 }
