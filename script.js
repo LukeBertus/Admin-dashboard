@@ -19,6 +19,7 @@ searchSvg.addEventListener('mouseleave', e => searchSvg.setAttribute("fill", "#0
 // #region searchIcon functionality
 const searchBar = document.querySelector(".search")
 searchSvg.addEventListener('click', e => searchBar.focus())
+// #endregion
 // #region sidebar interactivity
 const home = document.querySelector(".home")
 home.addEventListener('mouseenter', e => home.style.transform = "scale(1.05) translateX(1rem)");
@@ -55,7 +56,7 @@ support.addEventListener('mouseleave', e => support.style.transform = "");
 const privacy = document.querySelector(".privacy")
 privacy.addEventListener('mouseenter', e => privacy.style.transform = "scale(1.05) translateX(1rem)");
 privacy.addEventListener('mouseleave', e => privacy.style.transform = "");
- 
+// #endregion
  
 
  

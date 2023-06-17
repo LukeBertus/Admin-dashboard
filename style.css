@@ -169,8 +169,23 @@ input {
     cursor: default;
 }
 ul > li {
-    transition: all 190ms;
+    transition: all 190ms ease;
     cursor: pointer;
+}
+.main{
+    display: grid;
+    grid-template: 11fr 10fr / 1fr 18rem;
+    margin: 2.5rem 1.5rem;
+}
+.projectContainer{
+    background-color: #b3c9d0;
+    grid-area: 1/1 / 3/2;
+}
+.announcementContainer{
+    background-color: #c5e3bf;
+}
+.trendingContainer{
+    background-color:#f0cfcc;
 }
 
 
