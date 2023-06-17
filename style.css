@@ -73,9 +73,11 @@ ul li:nth-child(1) {
     position: relative;
     top: 9px;
     left: 15px;
+    cursor: default;
 }
 .logo {
     width: 3.5rem;
+    cursor: default;
 }
 .hero{
     display: flex;
@@ -149,6 +151,7 @@ input {
     margin-left: 1rem;
     margin-top: 0.7rem;
     transition: all 0.05s;
+    cursor: pointer;
 }
 .heroBottom button:hover {
     background-color: var(--accent-background);
@@ -156,9 +159,11 @@ input {
 .greeting{
     font: 700 0.9rem 'roboto', sans-serif;
     margin-bottom: 0.4rem;
+    cursor: default;
 }
 .username{
     font: 700 1.6rem 'roboto', sans-serif;
+    cursor: default;
 }
 ul > li {
     transition: all 190ms;
