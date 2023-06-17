@@ -92,6 +92,7 @@ ul li:nth-child(1) {
 .searchIcon {
     width: 1.7rem;
     margin-right: 1rem;
+    cursor: pointer;
 }
 .notifications {
     width: 1.7rem;
@@ -106,7 +107,14 @@ ul li:nth-child(1) {
 }
 .search {
     width: 90%;
+    height: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font: 1.1rem 'roboto', sans-serif;
+    
 }
+
+
 .name {
     text-decoration: none;
     font: 700 1.1rem 'roboto', sans-serif;
@@ -152,3 +160,20 @@ input {
 .username{
     font: 700 1.6rem 'roboto', sans-serif;
 }
+ul > li {
+    transition: all 190ms;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
