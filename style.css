@@ -101,7 +101,7 @@ ul li:nth-child(1) {
 }
 .notifications {
     width: 1.7rem;
-    margin-right: 1.4rem;
+    margin: 0 1.4rem;
 }
 .pfp {
     width: 3rem;
@@ -149,7 +149,7 @@ input {
     font: 700 0.9rem 'ubuntu', sans-serif;
     letter-spacing: 0.3px;
     border-radius: 1.15rem;
-    margin-left: 1rem;
+    margin-left: 1.5rem;
     margin-top: 0.7rem;
     transition: all 0.05s;
     cursor: pointer;
@@ -214,5 +214,44 @@ ul > li {
     background-color: white;
     border-top-right-radius: 0.55rem;
     border-bottom-right-radius: 0.55rem;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    padding: 1.3rem 1rem 1rem;
 }
+.projectName{
+    font: 700 1.2rem 'ubuntu', sans-serif;
+    color: rgb(22, 22, 22);
+    margin-bottom: 0.3rem;
+}
+.summary{
+    font: 400 0.95rem 'roboto', sans-serif;
+    color: rgb(72, 72, 72);
+    
+}
+.iconContainer{
+    padding: 0.1rem;
+    display: grid;
+    grid-template: min-content / 1fr repeat(3, 2rem);
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+}
+
+/* #region card icons */
+.star1 {
+    width: 2rem;
+}
+.delete1 {
+    width: 1.9rem;
+}
+.share1 {
+    width: 1.7rem;
+   
+}
+/* #endregion */
+
+
+
+
+
 
