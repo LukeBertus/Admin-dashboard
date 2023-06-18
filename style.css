@@ -172,7 +172,7 @@ ul > li {
 }
 .main{
     display: grid;
-    grid-template: 11fr 10fr / 1fr 18rem;
+    grid-template: 11fr 10fr / 1fr 17rem;
     padding: 2rem 3rem 5rem 1.5rem;
     background-color: var(--grey);
 }
@@ -255,23 +255,54 @@ ul > li {
     grid-template-rows: min-content 1fr;
 }
 
-.announcementTitle{
+.announTitle{
     font: 500 1.5rem 'roboto', sans-serif;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .announcements{
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, min-content);
     background-color: white;
+    padding: 0.6rem 1.5rem 0;
+    border-radius: 0.65rem;
 }
 
-.announcement{}
+.announcement{
+    border-bottom: 1px solid rgb(199, 199, 199);
+}
 
-.announcementTitle{}
+.announcementTitle{
+    font: 700 0.9rem 'roboto', sans-serif;
+    margin-top: 1rem;
+    
+}
 
-.announcementSummary{}
-
+.announcementSummary{
+    font: 500 0.75rem 'reboto', sans-serif;
+    margin: 0.1rem 0 1rem;
+    color: rgb(82, 82, 82);
+}
+.trendingContainer{
+    display: grid;
+    grid-template-rows: min-content 1fr;
+}
+.trendingTitle{
+    font: 500 1.5rem 'roboto', sans-serif;
+    margin: 1rem 0;
+}
+.trendingUsers{
+    background-color: white;
+    border-radius: 0.65rem;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    padding: 1rem;
+    align-items: center;
+}
+.trender{}
+.trendingText{}
+.trendingName{}
+.trendingSubText{}
 
 
 
