@@ -58,30 +58,56 @@ privacy.addEventListener('mouseenter', e => privacy.style.transform = "scale(1.0
 privacy.addEventListener('mouseleave', e => privacy.style.transform = "");
 // #endregion
 // #region favourite functionality
-const star1 = document.querySelector(".star1")
-const star1Path = document.querySelector(".star1Path")
-let fav1 = 0
-star1.addEventListener('click', e => {
-    if (fav1) {
-        star1Path.setAttribute("d", "M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z")
-        star1.setAttribute("fill", "")
-        fav1=0
-    }
-    else {
-    star1Path.setAttribute("d", "M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z")
-    star1.setAttribute("fill", "rgb(255, 183, 0)")
-    console.log("hit")
-    fav1 = 1
-    }
-})
-//#endregion
-//#region delete functionality
-const delete1 = document.querySelector(".delete1")
-const card1 = document.querySelector(".card1")
-delete1.addEventListener('click', e => {
-    card1.remove()
 
-})
+function defineFavs() {
+    for (let i=1; i<10; i++) {
+        let variableName = "fav" + i;
+        window[variableName] = 0;
+    }
+}
+defineFavs()
+
+function defineSelectors() {
+    for (let i=1; i<10; i++) {
+        let svgName = "star" + i
+        let pathName = "star" + i +"Path"
+        let deleteNum = "delete" + i
+        let cardNum  = "card" + i
+        window[svgName] = document.querySelector("." + svgName)
+        window[pathName] = document.querySelector("." + pathName)
+        window[deleteNum] = document.querySelector("." + deleteNum)
+        window[cardNum] = document.querySelector("." + cardNum)
+    }
+}
+defineSelectors();
+
+let functions = {};
+function defineEventListeners() {
+    for (let i=1; i<10; i++) {
+        let code = `
+        functions.func${i} = function () {
+            if (fav${i}) {
+                star${i}Path.setAttribute("d", "M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z")
+                star${i}.setAttribute("fill", "")
+                fav${i}=0
+            }
+            else {
+            star${i}Path.setAttribute("d", "M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z")
+            star${i}.setAttribute("fill", "rgb(255, 183, 0)")
+            fav${i} = 1
+            }
+        }`
+        eval(code);
+
+        let code2 = `star${i}.addEventListener('click', functions.func${i})`
+        eval(code2);
+
+        let code3 = `delete${i}.addEventListener('click', e => card${i}.remove())`
+        eval(code3);
+    }
+    
+}
+defineEventListeners();
 
  
  
