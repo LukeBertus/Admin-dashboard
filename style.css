@@ -299,10 +299,40 @@ ul > li {
     padding: 1rem;
     align-items: center;
 }
-.trender{}
-.trendingText{}
-.trendingName{}
-.trendingSubText{}
+.trender{
+    display: grid;
+    grid-template-columns: 3.5rem 1fr;
+    justify-items: center;
+}
+.pfp1{
+    width: 3.55rem;
+}
+.pfp2{
+    width: 2.7rem;
+}
+.pfp3{
+    width: 3.1rem;
+}
+.pfp4{
+    width: 2.7rem;
+}
+.trendingText{
+    justify-self: left;
+    align-self: center;
+    margin-left: 0.7rem;
+}
+.trendingName{
+    justify-self: left;
+    align-self: center;
+    font: 500 0.9rem 'ubuntu', sans-serif;
+    color: rgb(41, 41, 41);
+    margin-bottom: 0.15rem;
+    
+}
+.trendingSubText{
+    font: 400 0.9rem 'roboto', sans-serif;
+    color: rgb(96, 96, 96);
+}
 
 
 
